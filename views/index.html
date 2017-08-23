@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Abstraction Layer</title>
+    <meta name="description" content="A microservice Image Search Abstraction Layer">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+    href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+  </head>
+  <body class="container">
+    <header>
+      <h1>
+        Image Search Abstraction Layer
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        This is a image search abstraction layer API. It uses the google search API to search for images and
+        sends back a JSON with simplified search results.
+        The google API returns 10 search results at a time. You can use the ?offset parameter to request a different page
+        of the results.
+      </p>
+
+      <h2>Searching for images example:</h2>
+          <pre>
+            <a href="/api/imagesearch/cats">/api/imagesearch/cats</a>
+            <a href="/api/imagesearch/cats?offset=2">/api/imagesearch/cats?offset=2</a>
+          </pre>
+      <h2>Example response:</h2>
+      <pre>
+      [
+        {
+        "url": "http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg",
+        "snippet": "Cats | Animal Planet",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpQbbSO17HYWZxPPL80FSIYVHpvYGzJKjY4aPFtfEr7409Oh4I52Isw6mE",
+        "context": "http://www.animalplanet.com/pets/cats/"
+        },
+        ...
+      ]
+      </pre>
+
+      <h2>Checking last 10 searches example:</h2>
+      <p>
+        You can also check which were the last 10 searches performed with the API.
+      </p>
+          <pre>
+            <a href="/api/latest">/api/latest</a>
+          </pre>
+      <h2>Example response:</h2>
+      <pre>
+      [
+        [{"term":"cats",
+          "when":"2017-08-23T10:06:19.955Z"},
+         {"term":"cats",
+          "when":"2017-08-23T10:05:59.562Z"}
+      ]
+      </pre>
+
+
+    </main>
+
+    <footer>
+      made by me
+    </footer>
+  </body>
+</html>

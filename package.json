@@ -1,0 +1,26 @@
+{
+  "name": "zelite-image-search",
+  "version": "0.0.1",
+  "description": "A image search microservice which acts as an abstraction layer for google image search",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "helmet": "^3.8.1",
+    "mongodb": "^2.2.31"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https:/github.com/zelite/image-abstraction-layer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
